@@ -1,16 +1,16 @@
 import 'package:brew_crew/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
-  final AuthService _auth = AuthService();
-
+class _RegisterState extends State<Register> {
   String email = '';
   String password = '';
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class _SignInState extends State<SignIn> {
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
-        title: Text("Sign in to Brew Crew"),
+        title: Text("Sign Up to Brew Crew"),
         elevation: 0,
       ),
       body: Container(
@@ -60,7 +60,7 @@ class _SignInState extends State<SignIn> {
                 },
                 color: Colors.green,
                 child: Text(
-                  "Sign In",
+                  "Register",
                   style: TextStyle(
                     color: Colors.white,
                   ),
